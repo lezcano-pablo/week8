@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Form Exercice</title>
+        <link rel="stylesheet" type="text/css" href="Resources/styles.css">
+        <script type="text/javascript" src="Resources/funtions.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="form1" action="/FormManagement/Servlet"
+              method="post" onsubmit="return validarForma(this);">
+            <input type="hidden" name="oculto" value="valorOculto">
+           <table width="200" id="one-column-emphasis">
+                <caption>
+                    Data Registration Form
+                </caption>
+                <tr>
+                    <td class="oce-first">
+                        User (*)
+                    </td>
+                    <td>
+                        <input class="default" type="text"
+                               name="usuario" value=""
+                               onfocus="this.select();"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Password: (*)
+                    </td>
+                    <td>
+                        <input class="default" type="password"
+                               name="password" onfocus="this.select();">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Technologies of interest: (*)
+                    </td>
+                    <td>
+                        Java <input type="checkbox" name="tecnologia" value="java">
+                        &nbsp;&nbsp;&nbsp;
+                        .Net <input type="checkbox" name="tecnologia" value="net">
+                        &nbsp;&nbsp;&nbsp;
+                        Php <input type="checkbox" name="tecnologia" value="php">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                       Gender: (*)
+                    </td>
+                    <td>
+                        Man<input type="radio" name="genero" value="M">
+                        &nbsp;&nbsp;&nbsp;<!--genera espacios entre los elementos de manera horizontal -->
+                        Woman <input type="radio" name="genero" value="W">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Occupation: (*)
+                    </td>
+                    <td>
+                        <select name="ocupacion" class="default">
+                            <option value="">Select</option>
+                            <option value="1">Teacher</option>
+                            <option value="2">Engineer</option>
+                            <option value="3">Retired</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Favorite Music: 
+                    </td>
+                    <td>
+                        <select name="musica" multiple class="default">
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="salsa">Salsa</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Comments:
+                    </td>
+                    <td>
+                        <textarea name="comentarios" cols="30" rows="2"
+                                  class="default" onfocus="this.select();">
+                            </textarea>
+                    </td>
+                </tr>
+                <tr style="text-align:center;">
+                    <td>
+                        <input type="reset" value="Limpiar" class="default">
+                    </td>
+                    <td>
+                        <input type="submit" value="Enviar" class="default">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
